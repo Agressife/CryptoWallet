@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33027.164
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CryptoWallet", "CryptoWallet.csproj", "{F7D8DC45-1465-4E37-A737-B948C7AAA11C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F7D8DC45-1465-4E37-A737-B948C7AAA11C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7D8DC45-1465-4E37-A737-B948C7AAA11C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7D8DC45-1465-4E37-A737-B948C7AAA11C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7D8DC45-1465-4E37-A737-B948C7AAA11C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1E56B2A9-4637-4C28-8D5E-39CEA1E938C4}
+	EndGlobalSection
+EndGlobal

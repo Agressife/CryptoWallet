@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - CryptoWallet</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/style.css">
+    <link rel="stylesheet" type="text/css" href="~/css/style1.css">
+    <link rel="stylesheet" type="text/css" href="~/css/style2.css">
+    <link rel="icon" href="./content/icon.svg"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Rubik:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+</head>
+<body>
+    <header class="header">
+        <div class="header__wrap">
+            <div class="header__wrap__all">
+                <div class="header__wrap_logo">
+                    <a href="index">
+                        <img style="width: 245px;" src="./content/logo-kripta_v2.png" alt="CryptoW">
+                    </a>
+                </div>
+                <div class="header__wrap__menu">
+                    <ul>
+                        <li>@{
+                            if (Models.User.login != null) {<a class="simple" href="workspace">Кошелек</a> }
+                        }</li>
+                        <li><a class="simple" href="?id=2"> Скачать </a></li>
+                        <li><a class="simple" href="FAQ">F.A.Q.</a></li>
+                        <li>@{if (Models.User.login == null)
+                            {<a class="pol" href="regin">Регистрация</a> }
+                                else { <a class="pol" href="signOut">ВЫЙТИ</a> } }</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer__wrap__in">
+                <div class="footer__wrap">
+                    <div class="footer__wrap__logo">
+                        <a href="index">
+                            <img style="width: 250px; opacity:0.8" src="./content/logo.png" alt="CryptoW">
+                        </a>
+                    </div>
+                    <div class="footer__wrap__menu">
+                        <div class="menu-footer-container">
+                            <ul>
+                                <li><a class="simple" href="https://vk.com/club220985109" target="_blank">О нас</a></li>
+                                <li><a class="simple" href="Contacts">Контакты</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

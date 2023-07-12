@@ -1,0 +1,50 @@
+﻿@page
+@model CryptoWallet.Pages.workspaceModel
+@{
+}
+<h1 class='table_web_poisk'>Криптовалюты @Models.User.login</h1>
+<div class="table_web_poisk">
+    <span>Курс доллара: @Models.CurrContainer.UsdCurr</span>
+    <span>Курс bitcoin: @Models.CurrContainer.BitcoinCurr</span>
+</div>
+<div class="pola">
+    <a class="pol" href="addCrypto">Добавить криптовалюту</a>
+    <a class="pol" href="changer">Изменить криптовалюту</a>
+</div>
+<br />
+<div class="popup__bg">
+</div>
+<div class='table_web_poisk'>
+    <table class='web_poisk'>
+        <tr class="tr_web">
+            <td class="cell">Название</td>
+            <td class="cell">Тикет</td>
+            <td class="cell">Количество</td>
+            <td class="cell">Текущая стоимость за штуку</td>
+            <td class="cell">Общая сумма</td>
+            <td class="cell">Доход в $</td>
+            <td class="cell">Доход в %</td>
+        </tr>
+        @{ int i = 0;
+            foreach (var crypto in workspaceModel.cryptos)
+            {
+                <tr class="tr_web">
+                    <td class="cell">@crypto.name</td>
+                    <td class="cell">@crypto.ticket</td>
+                    <td class="cell">@crypto.allTokens</td>
+                    <td class="cell">@crypto.usdForTokenNow</td>
+                    <td class="cell">@crypto.usdForAllTokensNow</td>
+                    <td class="cell">@crypto.usdIncome</td>
+                    <td class="cell">@crypto.percentOfIncome</td>
+                    <td class="cell">
+                        <form method="post">
+                            <input name="nameOfCrypto" type="number" value="@i" style="display:none;" />
+                            <button class="td_button" type="submit">Удалить</button>
+                        </form>
+                    </td>
+                </tr>
+                i++;
+            }
+        }
+    </table>
+</div>

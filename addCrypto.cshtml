@@ -1,0 +1,15 @@
+﻿@page
+@model CryptoWallet.Pages.addCryptoModel
+@{
+}
+<h1>@Models.User.login, хотите добавить транзакцию?</h1>
+<div id="addCryptoDiv">
+    <form id="addCryptoForm" method="post" autocomplete="off">
+        <div class="vvod">
+            <input type="text" id="nameAddCr" name="nameAddCr" placeholder="Название валюты" />
+            <input type="text" id="numberAddCr" name="numberAddCr" placeholder="Количество" />
+            <input type="password" id="sumAddCr" name="sumAddCr" placeholder="Стоимость за шт" />
+            <button class="td_button" type="submit">Добавить</button>
+        </div>
+    </form>
+</div>
